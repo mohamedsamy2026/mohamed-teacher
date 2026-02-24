@@ -20,8 +20,9 @@ body {
 /* الخلفية فقط */
 
 body.light-mode {
-  background-color: #e9f4fd;
+  background-color: #ffffff;
 }
+
 
 body.dark-mode {
   background-color: #0b132b;
@@ -79,67 +80,42 @@ ul{
 /* Header Start */
 
 .header {
-  height: 120px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5rem;
-  padding-left: 2rem;
-  font-size: 23px;
+  font-size: 20px;
   position: fixed;
   width: 100%;
   font-weight: 600;
   z-index: 99999; 
-
-  
+  background-color: rgba(11, 15, 26, 0.95);
 }
-
-body.light-mode .header {
-  background-color: rgba(0, 136, 204, 0.85); 
-}
-
-body.dark-mode .header {
-  background-color: rgba(19, 33, 76, 0.9) 
-}
-
 
 .logo {
   overflow: hidden;
-  object-fit: cover;
-  object-position: top;
-  height: 130px;
-  margin-bottom: 30px;
+  height: 200px; 
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
-.logo img{
-  max-width: 160px;
+
+.logo img {
+  max-width: 250px;
+  height: 70px; 
   transition: all 0.4s ease;
   cursor: pointer;
-  
-
 }
 
-.logo img:hover{
-    transform: scale(1.1);
+.logo img:hover {
+  transform: scale(1.05);
 }
 
-
-
-.humburger {
-  display: none;
-}
-.navbar{
+.navbar {
   border-radius: 50px;
-  padding: 14px 0;
-}
-
-body.light-mode .navbar {
-  background-color: #005f99; 
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-
-body.dark-mode .navbar {
-  background-color: rgba(255, 255, 255, 0.08); 
+  padding: 8px 15px;
+  background-color: rgba(255, 255, 255, 0.05); 
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -154,35 +130,85 @@ body.dark-mode .navbar {
 .navbar ul li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  margin: 0 20px;
+  margin: 0 15px;
   border-radius: 30px;
-  padding: 10px 13px;
+  padding: 8px 12px;
   transition: all 0.4s ease;
 }
 
-.navbar ul li a:hover{
-    color:#00e1ff;
-    background-color: #ffffff;
-    transform: translateY(-7px);
+.navbar ul li a:hover {
+  color: #00e1ff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.differ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+.differ li a {
+  color: white !important; 
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+.differ li:first-child a {
+  background-color: #005f99;
+}
+
+.differ li:last-child a {
+  background-color: #0d4593;
+}
+
+
+.differ li:first-child a:hover {
+  background-color: #0088cc; 
+  box-shadow: 0 0 20px rgba(0, 136, 204, 0.7); 
+  transform: translateY(-5px); 
+}
+
+.differ li:last-child a:hover {
+  background-color: #1a5fb4;
+  box-shadow: 0 0 20px rgba(13, 69, 147, 0.7); 
+  transform: translateY(-5px);
+}
+
+
+
+
+.differ li a:hover {
+  background-color: #00e1ff;
+  color: #0b0f1a;
+}
+
+.humburger {
+    display: none; 
 }
 
 
 /* media Specail Start */
 
-@media (max-width: 1350px) {
+@media (max-width: 1800px) {
 
   .header {
     padding: 0 3rem;
-    padding-left:0rem ;
     position: fixed;
     justify-content: space-between; 
 
   }
 
   .humburger {
-    display: block;
+    display: block !important;
     cursor: pointer;
     font-size: 25px;
     width: 45px;
@@ -200,8 +226,8 @@ body.dark-mode .navbar {
     width: max-content;
     height: max-content;
     opacity: 0;
-    color: white;
-    background-color: #01356d;
+    color: #ffffff;
+    background-color: #005f99; 
     padding: 10px;
     font-size: 30px;
     border-radius: 10px;
@@ -213,9 +239,7 @@ body.dark-mode .navbar {
     transform: rotate(180deg);
   }
 
-  .dark-mode .humburger i{
-    background-color: #1572d6;
-  }
+
 
   .navbar {
     position: absolute;
@@ -234,7 +258,7 @@ body.dark-mode .navbar {
     opacity: 1;
     visibility: visible;  
     pointer-events: auto; 
-    top: 120px;            
+    top: 100px;            
     border-radius: 0px;
   }
 
@@ -265,16 +289,29 @@ body.dark-mode .navbar {
     order: 1;
   }
 
-  body.dark-mode .navbar {
-  background-color: rgb(19, 40, 100) 
+body.dark-mode .navbar {
+  background: linear-gradient(145deg, #0b132b, #1c2541);
+  border-bottom: 2px solid #00e1ff; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
+body.light-mode .navbar {
+  background: linear-gradient(145deg, #278bce, #1362ac);
+  border-bottom: 2px solid #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul li a:hover{
+  color: white !important;
+}
+
+
 }
 
 /* media Specail End */
 
 
 /* Header End */
-
 
 
 /* زر الوضع الليلي والنهاري  يبدأ*/
