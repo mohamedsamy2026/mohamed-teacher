@@ -1,0 +1,347 @@
+/* libarary Font Size */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+
+/* الخلفية فقط */
+
+body.light-mode {
+  background-color: #e9f4fd;
+}
+
+body.dark-mode {
+  background-color: #0b132b;
+}
+
+
+
+
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.container-1 {
+  width: 100%;          
+  max-width: 1350px; 
+  margin:  auto;
+       
+}
+
+
+/* شكل الاسكرول */
+
+::-webkit-scrollbar {
+    width: 9px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff; 
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 96, 128); 
+    border-radius: 10px;
+    width: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(2, 86, 137); 
+}
+
+
+
+
+
+
+/* Header Start */
+
+.header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  padding-left: 2rem;
+  font-size: 23px;
+  position: fixed;
+  width: 100%;
+  font-weight: 600;
+  z-index: 99999; 
+
+  
+}
+
+body.light-mode .header {
+  background-color: rgba(0, 136, 204, 0.85); 
+}
+
+body.dark-mode .header {
+  background-color: rgba(19, 33, 76, 0.9) 
+}
+
+
+.logo {
+  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+  height: 130px;
+  margin-bottom: 30px;
+}
+.logo img{
+  max-width: 160px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  
+
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+}
+
+
+
+.humburger {
+  display: none;
+}
+.navbar{
+  border-radius: 50px;
+  padding: 14px 0;
+}
+
+body.light-mode .navbar {
+  background-color: #005f99; 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+body.dark-mode .navbar {
+  background-color: rgba(255, 255, 255, 0.08); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+}
+
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 20px;
+  border-radius: 30px;
+  padding: 10px 13px;
+  transition: all 0.4s ease;
+}
+
+.navbar ul li a:hover{
+    color:#00e1ff;
+    background-color: #ffffff;
+    transform: translateY(-7px);
+}
+
+
+/* media Specail Start */
+
+@media (max-width: 1350px) {
+
+  .header {
+    padding: 0 3rem;
+    padding-left:0rem ;
+    position: fixed;
+    justify-content: space-between; 
+
+  }
+
+  .humburger {
+    display: block;
+    cursor: pointer;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    order: 3;   
+    margin-right: 10px;
+  }
+
+
+  .humburger i {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+    opacity: 0;
+    color: white;
+    background-color: #01356d;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+
+  .humburger i.active {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+
+  .dark-mode .humburger i{
+    background-color: #1572d6;
+  }
+
+  .navbar {
+    position: absolute;
+    background-color: #ffffff;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    padding: 0 3rem;
+    opacity: 0;
+    transition: 0.3s ease;
+    visibility: hidden;    
+    pointer-events: none;
+  }
+
+  .navbar.active {
+    opacity: 1;
+    visibility: visible;  
+    pointer-events: auto; 
+    top: 120px;            
+    border-radius: 0px;
+  }
+
+  .navbar ul {
+    display: block;
+  }
+
+  .navbar ul li {
+    margin: 20px 0;
+    border-bottom: 1px solid #a4a4a4;
+    padding-bottom: 10px;
+  }
+
+  .navbar ul li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar ul li a {
+    margin: 0;
+  }
+
+  .container {
+    margin: 0; 
+    order: 2;   
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  body.dark-mode .navbar {
+  background-color: rgb(19, 40, 100) 
+}
+}
+
+/* media Specail End */
+
+
+/* Header End */
+
+
+
+/* زر الوضع الليلي والنهاري  يبدأ*/
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px;
+  margin-left: 30px ;
+  margin-right: 30px ;
+
+}
+
+
+.toggle {
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(45deg, #a2d9ff, #f7d794);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+    border: none;
+  outline: none;
+
+}
+
+/* الدائرة */
+
+.circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: left 0.4s, background 0.4s, color 0.4s;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+
+
+.dark-mode .toggle {
+  background: linear-gradient(45deg, #3174e0, #05727e);
+}
+
+.dark-mode .circle {
+  left: 43px;
+  font-size: 25px;
+  background: rgb(4, 64, 142);
+  color: #fbfbfb;
+}
+
+
+
+/* زر الوضع الليلي والنهاري  ينتهي*/
+
+
+
+
+/* home Start */
+
+
+
+/* home End */
