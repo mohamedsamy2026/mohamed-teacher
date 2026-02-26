@@ -11,6 +11,7 @@ humburgerMenu.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
+
 // دي عشان تقفل  المنيو
 document.querySelectorAll(".navbar ul li a").forEach((link) => {
   link.addEventListener("click", () => {
@@ -21,11 +22,6 @@ document.querySelectorAll(".navbar ul li a").forEach((link) => {
 });
 
 // بتاع الناف بار ينتهي
-
-
-
-
-
 
 
 
@@ -76,3 +72,8 @@ function updateUI(isDark) {
 // ==========================================
 //  الوضع الليلي/النهاري مع تغيير اللوجو انتهي
 // ==========================================
+
+
+
+
+

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
 
 
-
+/* Normaly */
 
 * {
   margin: 0;
@@ -27,8 +27,6 @@ body.light-mode {
 body.dark-mode {
   background-color: #0b132b;
 }
-
-
 
 
 a{
@@ -90,8 +88,17 @@ ul{
   width: 100%;
   font-weight: 600;
   z-index: 99999; 
-  background-color: rgba(11, 15, 26, 0.95);
 }
+
+.light-mode header{
+  background-color: rgba(31, 44, 79, 0.95);
+}
+.dark-mode header{
+  background-color: rgba(16, 26, 57, 0.95);
+}
+
+
+
 
 .logo {
   overflow: hidden;
@@ -112,9 +119,11 @@ ul{
   transform: scale(1.05);
 }
 
+
+
 .navbar {
   border-radius: 50px;
-  padding: 8px 15px;
+  padding: 11px 15px;
   background-color: rgba(255, 255, 255, 0.05); 
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -134,14 +143,18 @@ ul{
   font-weight: 600;
   margin: 0 15px;
   border-radius: 30px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   transition: all 0.4s ease;
 }
 
 .navbar ul li a:hover {
-  color: #00e1ff;
+  transform: translateY(-5px);
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+
+
+
 
 .differ {
   display: flex;
@@ -149,8 +162,6 @@ ul{
   align-items: center;
   gap: 20px;
 }
-
-
 
 .differ li a {
   color: white !important; 
@@ -185,11 +196,12 @@ ul{
 
 
 
-
 .differ li a:hover {
   background-color: #00e1ff;
   color: #0b0f1a;
 }
+
+
 
 .humburger {
     display: none; 
@@ -310,11 +322,12 @@ body.light-mode .navbar {
 
 /* media Specail End */
 
-
 /* Header End */
 
 
-/* زر الوضع الليلي والنهاري  يبدأ*/
+
+
+/*  الوضع الليلي والنهاري  يبدأ*/
 .container {
   display: flex;
   justify-content: space-between; 
@@ -369,11 +382,7 @@ body.light-mode .navbar {
   background: rgb(4, 64, 142);
   color: #fbfbfb;
 }
-
-
-
-/* زر الوضع الليلي والنهاري  ينتهي*/
-
+/*  الوضع الليلي والنهاري  ينتهي*/
 
 
 
